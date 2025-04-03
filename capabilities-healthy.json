@@ -1,0 +1,248 @@
+{
+	"_backend_deploy_metadata": {
+		"date": "2025-03-18T13:38:56Z",
+		"versions": {
+			"openeo": "0.39.1",
+			"openeo_aggregator": "0.46.0a1.dev20250311+494",
+			"openeo_driver": "0.130.2a1.dev20250311+1060"
+		}
+	},
+	"_partitioned_job_tracking": true,
+	"api_version": "1.0.0",
+	"backend_version": "0.46.0a1",
+	"billing": {
+		"currency": "credits"
+	},
+	"conformsTo": [
+		"https://api.openeo.org/1.2.0",
+		"https://api.openeo.org/extensions/remote-process-definition/0.1.0",
+		"https://api.openeo.org/extensions/processing-parameters/0.1.0",
+		"https://api.stacspec.org/v1.0.0/collections",
+		"https://api.openeo.org/extensions/federation/0.1.0"
+	],
+	"description": "openEO Platform, provided through openEO Aggregator Driver.",
+	"endpoints": [
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/file_formats"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/udf_runtimes"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/credentials/oidc"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/me"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/collections"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/collections/{collection_id}"
+		},
+		{
+			"methods": [
+				"POST"
+			],
+			"path": "/validation"
+		},
+		{
+			"methods": [
+				"POST"
+			],
+			"path": "/result"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/processes"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/processes/{namespace}"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/processes/{namespace}/{process_id}"
+		},
+		{
+			"methods": [
+				"POST",
+				"GET"
+			],
+			"path": "/jobs"
+		},
+		{
+			"methods": [
+				"DELETE",
+				"GET"
+			],
+			"path": "/jobs/{job_id}"
+		},
+		{
+			"methods": [
+				"DELETE",
+				"POST",
+				"GET"
+			],
+			"path": "/jobs/{job_id}/results"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/jobs/{job_id}/results/{user_base64}/{secure_key}"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/jobs/{job_id}/results/items/{user_base64}/{secure_key}/{item_id}"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/jobs/{job_id}/results/assets/{path:filename}"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/jobs/{job_id}/results/assets/{user_base64}/{secure_key}/{path:filename}"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/jobs/{job_id}/logs"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/service_types"
+		},
+		{
+			"methods": [
+				"POST",
+				"GET"
+			],
+			"path": "/services"
+		},
+		{
+			"methods": [
+				"DELETE",
+				"GET"
+			],
+			"path": "/services/{service_id}"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/services/{service_id}/logs"
+		},
+		{
+			"methods": [
+				"DELETE",
+				"PUT",
+				"GET"
+			],
+			"path": "/process_graphs/{process_graph_id}"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/process_graphs"
+		}
+	],
+	"federation": {
+		"eodc": {
+			"description": "Kubernetes native implementation of the OpenEO Api at EODC.",
+			"last_status_check": "2025-03-18T15:12:04Z",
+			"status": "online",
+			"title": "EODC openEO API",
+			"url": "https://openeo.eodc.eu/openeo/1.1.0/"
+		},
+		"sentinelhub": {
+			"description": "Sentinel Hub OpenEO by [Sinergise](https://sinergise.com)",
+			"last_status_check": "2025-03-18T15:12:04Z",
+			"status": "online",
+			"title": "Sentinel Hub OpenEO",
+			"url": "https://openeo.sentinel-hub.com/production/"
+		},
+		"vito": {
+			"description": "OpenEO API to the Terrascope/VITO Remote Sensing product catalog and processing services (using GeoPySpark driver).",
+			"last_status_check": "2025-03-18T15:12:04Z",
+			"status": "online",
+			"title": "VITO Remote Sensing openEO API",
+			"url": "https://openeo.vito.be/openeo/1.1/"
+		}
+	},
+	"id": "openeoplatform-0.46.0a1",
+	"links": [
+		{
+			"href": "https://openeocloud.vito.be/.well-known/openeo",
+			"rel": "version-history",
+			"type": "application/json"
+		},
+		{
+			"href": "https://openeocloud.vito.be/openeo/1.0.0/collections",
+			"rel": "data",
+			"type": "application/json"
+		},
+		{
+			"href": "https://openeocloud.vito.be/openeo/1.0.0/conformance",
+			"rel": "conformance",
+			"type": "application/json"
+		},
+		{
+			"href": "https://openeo.cloud/aup",
+			"rel": "terms-of-service",
+			"type": "text/html"
+		},
+		{
+			"href": "https://terrascope.be/en/privacy-policy",
+			"rel": "privacy-policy",
+			"type": "text/html"
+		}
+	],
+	"processing:software": {
+		"openeo": "0.39.1",
+		"openeo_aggregator": "0.46.0a1.dev20250311+494",
+		"openeo_driver": "0.130.2a1.dev20250311+1060"
+	},
+	"production": true,
+	"stac_extensions": [
+		"https://stac-extensions.github.io/processing/v1.1.0/schema.json"
+	],
+	"stac_version": "0.9.0",
+	"title": "openEO Platform",
+	"type": "Catalog",
+	"version": "1.0.0"
+}
