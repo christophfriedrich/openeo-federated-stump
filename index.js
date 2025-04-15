@@ -13,6 +13,9 @@ const fs = require('fs')
 const CAPABILITIES = JSON.parse(fs.readFileSync('./capabilities-'+STATUS+'.json'));
 const CREDENTIALS_OIDC = JSON.parse(fs.readFileSync('./credentials-oidc.json'));
 const COLLECTIONS = JSON.parse(fs.readFileSync('./collections-'+STATUS+'.json'));
+const COLLECTIONS_AGERA5 = JSON.parse(fs.readFileSync('./collections-agera5-'+STATUS+'.json'));
+const COLLECTIONS_AUT_DEM = JSON.parse(fs.readFileSync('./collections-aut_dem-'+STATUS+'.json'));
+const COLLECTIONS_S2 = JSON.parse(fs.readFileSync('./collections-s2-'+STATUS+'.json'));
 
 app.get('/', (request, response) => {
     response.send(CAPABILITIES);
@@ -24,6 +27,18 @@ app.get('/credentials/oidc', (request, response) => {
 
 app.get('/collections', (request, response) => {
     response.send(COLLECTIONS);
+});
+
+app.get('/collections/AGERA5', (request, response) => {
+    response.send(COLLECTIONS_AGERA5);
+});
+
+app.get('/collections/AUT_DEM', (request, response) => {
+    response.send(COLLECTIONS_AUT_DEM);
+});
+
+app.get('/collections/SENTINEL2_L2A', (request, response) => {
+    response.send(COLLECTIONS_S2);
 });
 
 app.get("/status", (request, response) => {

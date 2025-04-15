@@ -1,0 +1,184 @@
+{
+    "cube:dimensions": {
+        "bands": {
+            "type": "bands",
+            "values": [
+                "dewpoint-temperature",
+                "precipitation-flux",
+                "solar-radiation-flux",
+                "temperature-max",
+                "temperature-mean",
+                "temperature-min",
+                "vapour-pressure",
+                "wind-speed"
+            ]
+        },
+        "t": {
+            "extent": [
+                "2015-01-01T00:00:00Z",
+                null
+            ],
+            "type": "temporal"
+        },
+        "x": {
+            "axis": "x",
+            "extent": [
+                -180.05,
+                179.95
+            ],
+            "reference_system": 4326,
+            "step": 0.1,
+            "type": "spatial"
+        },
+        "y": {
+            "axis": "y",
+            "extent": [
+                -90.05,
+                90.05
+            ],
+            "reference_system": 4326,
+            "step": 0.1,
+            "type": "spatial"
+        }
+    },
+    "description": "This dataset provides daily surface meteorological data at 0.1\u00b0x0.1\u00b0 spatial resolution for the period from 2015 to present as input for agro-ecological studies. This dataset is based on the hourly ECMWF ERA5 data at surface level and is referred to as AgERA5. Acquisition and pre-processing of the original ERA5 data is a complex and specialized job. By providing the AgERA5 dataset, users are freed from this work and can directly start with meaningful input for their analyses and modelling. To this end, the variables provided in this dataset match the input needs of most agro-ecological models.\n\nData were aggregated to daily time steps at the local time zone and corrected towards a finer topography at a 0.1\u00b0 spatial resolution. The correction to the 0.1\u00b0 grid was realized by applying grid and variable-specific regression equations to the ERA5 dataset interpolated at 0.1\u00b0 grid. The equations were trained on ECMWF's operational high-resolution atmospheric model (HRES) at a 0.1\u00b0 resolution. This way the data is tuned to the finer topography, finer land use pattern and finer land-sea delineation of the ECMWF HRES model.\n\nThe data was produced on behalf of the Copernicus Climate Change Service.\n\nThis dataset is marked as experimental because the integration in this backend has not yet been fully validated. Use with caution.",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180.05,
+                    -90.05,
+                    179.95,
+                    90.05
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2015-01-01T00:00:00Z",
+                    null
+                ]
+            ]
+        }
+    },
+    "id": "AGERA5",
+    "license": "proprietary",
+    "links": [
+        {
+            "href": "https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agrometeorological-indicators",
+            "rel": "alternate",
+            "title": "Product web page."
+        },
+        {
+            "href": "https://openeocloud.vito.be/openeo/1.0.0/collections",
+            "rel": "root"
+        },
+        {
+            "href": "https://openeocloud.vito.be/openeo/1.0.0/collections",
+            "rel": "parent"
+        },
+        {
+            "href": "https://openeocloud.vito.be/openeo/1.0.0/collections/AGERA5",
+            "rel": "self"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+        "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
+    ],
+    "stac_version": "0.9.0",
+    "summaries": {
+        "eo:bands": [
+            {
+                "description": "Mean dewpoint temperature at a height of 2 metres above the surface over the period 00h-24h local time. The dew point is the temperature to which air must be cooled to become saturated with water vapor. In combination with the air temperature it is used to assess relative humidity.",
+                "name": "dewpoint-temperature"
+            },
+            {
+                "description": "Total volume of liquid water (mm3) precipitated over the period 00h-24h local time per unit of area (mm2), per day.",
+                "name": "precipitation-flux"
+            },
+            {
+                "description": "Total amount of energy provided by solar radiation at the surface over the period 00-24h local time per unit area and time.",
+                "name": "solar-radiation-flux"
+            },
+            {
+                "description": "Maximum air temperature at 2m height (daily maximum)",
+                "name": "temperature-max"
+            },
+            {
+                "description": "Mean air temperature at 2m height (daily mean)",
+                "name": "temperature-mean"
+            },
+            {
+                "description": "Minimum air temperature at 2m height (daily minimum)",
+                "name": "temperature-min"
+            },
+            {
+                "description": "Contribution to the total atmospheric pressure provided by the water vapour over the period 00-24h local time per unit of time.",
+                "name": "vapour-pressure"
+            },
+            {
+                "description": "Mean wind speed at a height of 10 metres above the surface over the period 00h-24h local time.",
+                "name": "wind-speed"
+            }
+        ],
+        "federation:backends": [
+            "vito"
+        ],
+        "federation:missing": [
+            "eodc"
+        ],
+        "raster:bands": [
+            {
+                "name": "dewpoint-temperature",
+                "offset": 0,
+                "scale": 0.01,
+                "unit": "K"
+            },
+            {
+                "name": "precipitation-flux",
+                "offset": 0,
+                "scale": 0.01,
+                "unit": "mm/day"
+            },
+            {
+                "name": "solar-radiation-flux",
+                "offset": 0,
+                "scale": 1,
+                "unit": "j/m\u00b2day"
+            },
+            {
+                "name": "temperature-max",
+                "offset": 0,
+                "scale": 0.01,
+                "unit": "K"
+            },
+            {
+                "name": "temperature-mean",
+                "offset": 0,
+                "scale": 0.01,
+                "unit": "K"
+            },
+            {
+                "name": "temperature-min",
+                "offset": 0,
+                "scale": 0.01,
+                "unit": "K"
+            },
+            {
+                "name": "vapour-pressure",
+                "offset": 0,
+                "scale": 0.001,
+                "unit": "hPa"
+            },
+            {
+                "name": "wind-speed",
+                "offset": 0,
+                "scale": 0.01,
+                "unit": "m/s"
+            }
+        ]
+    },
+    "title": "ECMWF AGERA5 meteo dataset"
+}

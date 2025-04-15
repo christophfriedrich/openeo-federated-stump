@@ -1,0 +1,110 @@
+{
+    "cube:dimensions": {
+        "bands": {
+            "type": "bands",
+            "values": [
+                "DEM"
+            ]
+        },
+        "t": {
+            "extent": [
+                [
+                    "2018-01-01T00:00:00Z",
+                    null
+                ]
+            ],
+            "type": "temporal"
+        },
+        "x": {
+            "axis": "x",
+            "extent": [
+                9.3,
+                17.3
+            ],
+            "type": "spatial"
+        },
+        "y": {
+            "axis": "y",
+            "extent": [
+                46.2,
+                49.2
+            ],
+            "type": "spatial"
+        }
+    },
+    "description": "Austrian High Resolution DEM is generated from Airborne Laser Scanning data with a grid of 10m x 10m.",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    9.3,
+                    46.2,
+                    17.3,
+                    49.2
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2018-01-01T00:00:00Z",
+                    null
+                ]
+            ]
+        }
+    },
+    "id": "AUT_DEM",
+    "license": "proprietary",
+    "links": [
+        {
+            "href": "https://stac.eodc.eu/api/v1/collections/AUT_DEM/items",
+            "rel": "items",
+            "type": "application/geo+json"
+        },
+        {
+            "href": "https://openeocloud.vito.be/openeo/1.2/collections",
+            "rel": "root"
+        },
+        {
+            "href": "https://openeocloud.vito.be/openeo/1.2/collections",
+            "rel": "parent"
+        },
+        {
+            "href": "https://openeocloud.vito.be/openeo/1.2/collections/AUT_DEM",
+            "rel": "self"
+        }
+    ],
+    "providers": [
+        {
+            "name": "EODC",
+            "roles": [
+                "host"
+            ],
+            "url": "https://eodc.eu/"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.0.0/schema.json"
+    ],
+    "stac_version": "1.0.0",
+    "summaries": {
+        "eo:bands": [
+            {
+                "description": "Austrian high resolution DEM from airborne laser scanning data",
+                "name": "DEM"
+            }
+        ],
+        "federation:backends": [
+            "eodc"
+        ],
+        "federation:missing": [
+            "eodc"
+        ],
+        "gsd": 10
+    },
+    "title": "Austrian High Resolution DEM",
+    "type": "Collection"
+}
