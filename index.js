@@ -6,12 +6,12 @@ app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 const STATUS = 'missingeodc';
-//const STATUS = 'missing-eodc';
+//const STATUS = 'healthy';
 
 //import * as COLLECTIONS from './collections-healthy.json' with { type: "json" };
 const fs = require('fs')
 const CAPABILITIES = JSON.parse(fs.readFileSync('./capabilities-'+STATUS+'.json'));
-CREDENTIALS_OIDC = JSON.parse(fs.readFileSync('./credentials-oidc.json'));
+const CREDENTIALS_OIDC = JSON.parse(fs.readFileSync('./credentials-oidc.json'));
 const COLLECTIONS = JSON.parse(fs.readFileSync('./collections-'+STATUS+'.json'));
 
 app.get('/', (request, response) => {
@@ -25,7 +25,7 @@ app.get('/credentials/oidc', (request, response) => {
 app.get('/collections', (request, response) => {
     response.send(COLLECTIONS);
 });
-  
+
 app.get("/status", (request, response) => {
     const status = {
        "Status": "Running"
