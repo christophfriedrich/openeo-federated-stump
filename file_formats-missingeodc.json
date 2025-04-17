@@ -112,6 +112,7 @@
         "zarr": {
             "deprecated": false,
             "experimental": false,
+            "federation:backends": ["vito"],
             "gis_data_types": [
                 "raster"
             ],
@@ -208,6 +209,7 @@
                 "attach_gdalinfo_assets": {
                     "default": false,
                     "description": "Attaches *_gdalinfo.json files to the output results.",
+                    "federation:backends": ["vito"],
                     "type": "boolean"
                 },
                 "colormap": {
@@ -370,6 +372,7 @@
         "zarr": {
             "deprecated": false,
             "experimental": false,
+            "federation:backends": ["vito"],
             "gis_data_types": [
                 "raster"
             ],
