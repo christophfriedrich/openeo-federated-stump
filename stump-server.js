@@ -16,6 +16,7 @@ const COLLECTIONS = JSON.parse(fs.readFileSync('./collections-'+STATUS+'.json'))
 const COLLECTIONS_AGERA5 = JSON.parse(fs.readFileSync('./collections-agera5-'+STATUS+'.json'));
 const COLLECTIONS_AUT_DEM = JSON.parse(fs.readFileSync('./collections-aut_dem-'+STATUS+'.json'));
 const COLLECTIONS_S2 = JSON.parse(fs.readFileSync('./collections-s2-'+STATUS+'.json'));
+const COLLECTIONS_S2L1C = JSON.parse(fs.readFileSync('./collections-s2l1c-'+STATUS+'.json'));
 const PROCESSES = JSON.parse(fs.readFileSync('./processes-'+STATUS+'.json'));
 const FILE_FORMATS = JSON.parse(fs.readFileSync('./file_formats-'+STATUS+'.json'));
 
@@ -41,6 +42,10 @@ app.get('/collections/AUT_DEM', (request, response) => {
 
 app.get('/collections/SENTINEL2_L2A', (request, response) => {
     response.send(COLLECTIONS_S2);
+});
+
+app.get('/collections/SENTINEL2_L1C', (request, response) => {
+    response.send(COLLECTIONS_S2L1C);
 });
 
 app.get('/processes', (request, response) => {
