@@ -1,0 +1,45 @@
+{
+    "XYZ": {
+        "federation:backends": ["vito"],
+        "configuration": {
+            "tile_size": {
+                "default": 512,
+                "description": "Tile size in pixels.",
+                "federation:backends": ["vito"],
+                "type": "number"
+            }
+        },
+        "process_parameters": [
+            {
+                "description": "The lower left corner for coordinate axis 1 of the extent currently shown to the consumer.",
+                "federation:backends": ["vito"],
+                "name": "spatial_extent_west",
+                "schema": {
+                    "type": "number"
+                }
+            },
+            {
+                "description": "The lower left corner for coordinate axis 2 of the extent currently shown to the consumer.",
+                "name": "spatial_extent_south",
+                "schema": {
+                    "type": "number"
+                }
+            },
+            {
+                "description": "The upper right corner for coordinate axis 1 of the extent currently shown to the consumer.",
+                "name": "spatial_extent_east",
+                "schema": {
+                    "type": "number"
+                }
+            },
+            {
+                "description": "The upper right corner for coordinate axis 2 of the extent currently shown to the consumer.",
+                "name": "spatial_extent_north",
+                "schema": {
+                    "type": "number"
+                }
+            }
+        ],
+        "title": "XYZ tiled web map"
+    }
+}

@@ -1,0 +1,241 @@
+{
+    "Python": {
+        "default": "3",
+        "description": "Python 3 runtime environment.",
+        "title": "Python 3",
+        "type": "language",
+        "versions": {
+            "3": {
+                "libraries": {
+                    "geopandas": {
+                        "version": "0.13.2"
+                    },
+                    "netCDF4": {
+                        "version": "1.7.2"
+                    },
+                    "numpy": {
+                        "version": "1.22.4"
+                    },
+                    "openeo": {
+                        "version": "0.39.1"
+                    },
+                    "openeo_driver": {
+                        "version": "0.133.0a3.dev20250401+1083"
+                    },
+                    "pandas": {
+                        "version": "1.5.3"
+                    },
+                    "pyproj": {
+                        "version": "3.4.1"
+                    },
+                    "rasterio": {
+                        "version": "1.2.10"
+                    },
+                    "scipy": {
+                        "version": "1.8.1"
+                    },
+                    "shapely": {
+                        "version": "1.8.5.post1"
+                    },
+                    "xarray": {
+                        "version": "0.16.2"
+                    }
+                }
+            },
+            "3.8": {
+                "libraries": {
+                    "geopandas": {
+                        "version": "0.13.2"
+                    },
+                    "netCDF4": {
+                        "version": "1.7.2"
+                    },
+                    "numpy": {
+                        "version": "1.22.4"
+                    },
+                    "openeo": {
+                        "version": "0.39.1"
+                    },
+                    "openeo_driver": {
+                        "version": "0.133.0a3.dev20250401+1083"
+                    },
+                    "pandas": {
+                        "version": "1.5.3"
+                    },
+                    "pyproj": {
+                        "version": "3.4.1"
+                    },
+                    "rasterio": {
+                        "version": "1.2.10"
+                    },
+                    "scipy": {
+                        "version": "1.8.1"
+                    },
+                    "shapely": {
+                        "version": "1.8.5.post1"
+                    },
+                    "xarray": {
+                        "version": "0.16.2"
+                    }
+                }
+            },
+            "3.8.8": {
+                "libraries": {
+                    "geopandas": {
+                        "version": "0.13.2"
+                    },
+                    "netCDF4": {
+                        "version": "1.7.2"
+                    },
+                    "numpy": {
+                        "version": "1.22.4"
+                    },
+                    "openeo": {
+                        "version": "0.39.1"
+                    },
+                    "openeo_driver": {
+                        "version": "0.133.0a3.dev20250401+1083"
+                    },
+                    "pandas": {
+                        "version": "1.5.3"
+                    },
+                    "pyproj": {
+                        "version": "3.4.1"
+                    },
+                    "rasterio": {
+                        "version": "1.2.10"
+                    },
+                    "scipy": {
+                        "version": "1.8.1"
+                    },
+                    "shapely": {
+                        "version": "1.8.5.post1"
+                    },
+                    "xarray": {
+                        "version": "0.16.2"
+                    }
+                }
+            }
+        }
+    },
+    "Python-Jep": {
+        "federation:backends": ["vito"],
+        "default": "3",
+        "description": "Python 3 runtime environment.",
+        "title": "Python 3",
+        "type": "language",
+        "versions": {
+            "3": {
+                "libraries": {
+                    "geopandas": {
+                        "version": "0.13.2"
+                    },
+                    "netCDF4": {
+                        "version": "1.7.2"
+                    },
+                    "numpy": {
+                        "version": "1.22.4"
+                    },
+                    "openeo": {
+                        "version": "0.39.1"
+                    },
+                    "openeo_driver": {
+                        "version": "0.133.0a3.dev20250401+1083"
+                    },
+                    "pandas": {
+                        "version": "1.5.3"
+                    },
+                    "pyproj": {
+                        "version": "3.4.1"
+                    },
+                    "rasterio": {
+                        "version": "1.2.10"
+                    },
+                    "scipy": {
+                        "version": "1.8.1"
+                    },
+                    "shapely": {
+                        "version": "1.8.5.post1"
+                    },
+                    "xarray": {
+                        "version": "0.16.2"
+                    }
+                }
+            },
+            "3.8": {
+                "libraries": {
+                    "geopandas": {
+                        "version": "0.13.2"
+                    },
+                    "netCDF4": {
+                        "version": "1.7.2"
+                    },
+                    "numpy": {
+                        "version": "1.22.4"
+                    },
+                    "openeo": {
+                        "version": "0.39.1"
+                    },
+                    "openeo_driver": {
+                        "version": "0.133.0a3.dev20250401+1083"
+                    },
+                    "pandas": {
+                        "version": "1.5.3"
+                    },
+                    "pyproj": {
+                        "version": "3.4.1"
+                    },
+                    "rasterio": {
+                        "version": "1.2.10"
+                    },
+                    "scipy": {
+                        "version": "1.8.1"
+                    },
+                    "shapely": {
+                        "version": "1.8.5.post1"
+                    },
+                    "xarray": {
+                        "version": "0.16.2"
+                    }
+                }
+            },
+            "3.8.8": {
+                "libraries": {
+                    "geopandas": {
+                        "version": "0.13.2"
+                    },
+                    "netCDF4": {
+                        "version": "1.7.2"
+                    },
+                    "numpy": {
+                        "version": "1.22.4"
+                    },
+                    "openeo": {
+                        "version": "0.39.1"
+                    },
+                    "openeo_driver": {
+                        "version": "0.133.0a3.dev20250401+1083"
+                    },
+                    "pandas": {
+                        "version": "1.5.3"
+                    },
+                    "pyproj": {
+                        "version": "3.4.1"
+                    },
+                    "rasterio": {
+                        "version": "1.2.10"
+                    },
+                    "scipy": {
+                        "version": "1.8.1"
+                    },
+                    "shapely": {
+                        "version": "1.8.5.post1"
+                    },
+                    "xarray": {
+                        "version": "0.16.2"
+                    }
+                }
+            }
+        }
+    }
+}

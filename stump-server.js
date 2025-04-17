@@ -19,6 +19,8 @@ const COLLECTIONS_S2 = JSON.parse(fs.readFileSync('./collections-s2-'+STATUS+'.j
 const COLLECTIONS_S2L1C = JSON.parse(fs.readFileSync('./collections-s2l1c-'+STATUS+'.json'));
 const PROCESSES = JSON.parse(fs.readFileSync('./processes-'+STATUS+'.json'));
 const FILE_FORMATS = JSON.parse(fs.readFileSync('./file_formats-'+STATUS+'.json'));
+const SERVICE_TYPES = JSON.parse(fs.readFileSync('./service_types-'+STATUS+'.json'));
+const UDF_RUNTIMES = JSON.parse(fs.readFileSync('./udf_runtimes-'+STATUS+'.json'));
 
 app.get('/', (request, response) => {
     response.send(CAPABILITIES);
@@ -54,6 +56,14 @@ app.get('/processes', (request, response) => {
 
 app.get('/file_formats', (request, response) => {
     response.send(FILE_FORMATS);
+});
+
+app.get('/service_types', (request, response) => {
+    response.send(SERVICE_TYPES);
+});
+
+app.get('/udf_runtimes', (request, response) => {
+    response.send(UDF_RUNTIMES);
 });
 
 app.get("/status", (request, response) => {
