@@ -12,6 +12,8 @@ const STATUS = 'missingeodc';
 const fs = require('fs')
 const CAPABILITIES = JSON.parse(fs.readFileSync('./capabilities-'+STATUS+'.json'));
 const CREDENTIALS_OIDC = JSON.parse(fs.readFileSync('./credentials-oidc.json'));
+const CREDENTIALS_BASIC = JSON.parse(fs.readFileSync('./credentials-basic.json'));
+const ME = JSON.parse(fs.readFileSync('./me.json'));
 const COLLECTIONS = JSON.parse(fs.readFileSync('./collections-'+STATUS+'.json'));
 const COLLECTIONS_AGERA5 = JSON.parse(fs.readFileSync('./collections-agera5-'+STATUS+'.json'));
 const COLLECTIONS_AUT_DEM = JSON.parse(fs.readFileSync('./collections-aut_dem-'+STATUS+'.json'));
@@ -28,6 +30,14 @@ app.get('/', (request, response) => {
 
 app.get('/credentials/oidc', (request, response) => {
     response.send(CREDENTIALS_OIDC);
+});
+
+app.get('/credentials/basic', (request, response) => {
+    response.send(CREDENTIALS_BASIC);
+});
+
+app.get('/me', (request, response) => {
+    response.send(ME);
 });
 
 app.get('/collections', (request, response) => {
