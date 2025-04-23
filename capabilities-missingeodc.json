@@ -179,6 +179,12 @@
 				"GET"
 			],
 			"path": "/process_graphs"
+		},
+		{
+			"methods": [
+				"GET"
+			],
+			"path": "/files"
 		}
 	],
 	"federation": {

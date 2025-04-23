@@ -1,0 +1,67 @@
+{
+    "processes": [
+        {
+            "id": "evi",
+            "summary": "Enhanced Vegetation Index",
+            "description": "Computes the Enhanced Vegetation Index (EVI). It is computed with the following formula: `2.5 * (NIR - RED) / (1 + NIR + 6*RED + -7.5*BLUE)`.",
+            "parameters": [
+                {
+                    "name": "red",
+                    "description": "Value from the red band.",
+                    "schema": {
+                        "type": "number"
+                    }
+                },
+                {
+                    "name": "blue",
+                    "description": "Value from the blue band.",
+                    "schema": {
+                        "type": "number"
+                    }
+                },
+                {
+                    "name": "nir",
+                    "description": "Value from the near infrared band.",
+                    "schema": {
+                        "type": "number"
+                    }
+                }
+            ],
+            "returns": {
+                "description": "Computed EVI.",
+                "schema": {
+                    "type": "number"
+                }
+            }
+        },
+        {
+            "id": "ndsi",
+            "summary": "Normalized-Difference Snow Index",
+            "parameters": [
+                {
+                    "name": "green",
+                    "description": "Value from the Visible Green (0.53 - 0.61 micrometers) band.",
+                    "schema": {
+                        "type": "number"
+                    }
+                },
+                {
+                    "name": "swir",
+                    "description": "Value from the Short Wave Infrared (1.55 - 1.75 micrometers) band.",
+                    "schema": {
+                        "type": "number"
+                    }
+                }
+            ],
+            "returns": {
+                "schema": {
+                    "type": "number"
+                }
+            }
+        },
+        {
+            "id": "my_custom_process"
+        }
+    ],
+    "links": []
+}

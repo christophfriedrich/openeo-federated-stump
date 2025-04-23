@@ -10,19 +10,27 @@ const STATUS = 'missingeodc';
 
 //import * as COLLECTIONS from './collections-healthy.json' with { type: "json" };
 const fs = require('fs')
+
 const CAPABILITIES = JSON.parse(fs.readFileSync('./capabilities-'+STATUS+'.json'));
 const CREDENTIALS_OIDC = JSON.parse(fs.readFileSync('./credentials-oidc.json'));
 const CREDENTIALS_BASIC = JSON.parse(fs.readFileSync('./credentials-basic.json'));
 const ME = JSON.parse(fs.readFileSync('./me.json'));
+
 const COLLECTIONS = JSON.parse(fs.readFileSync('./collections-'+STATUS+'.json'));
 const COLLECTIONS_AGERA5 = JSON.parse(fs.readFileSync('./collections-agera5-'+STATUS+'.json'));
 const COLLECTIONS_AUT_DEM = JSON.parse(fs.readFileSync('./collections-aut_dem-'+STATUS+'.json'));
 const COLLECTIONS_S2 = JSON.parse(fs.readFileSync('./collections-s2-'+STATUS+'.json'));
 const COLLECTIONS_S2L1C = JSON.parse(fs.readFileSync('./collections-s2l1c-'+STATUS+'.json'));
+
 const PROCESSES = JSON.parse(fs.readFileSync('./processes-'+STATUS+'.json'));
 const FILE_FORMATS = JSON.parse(fs.readFileSync('./file_formats-'+STATUS+'.json'));
 const SERVICE_TYPES = JSON.parse(fs.readFileSync('./service_types-'+STATUS+'.json'));
 const UDF_RUNTIMES = JSON.parse(fs.readFileSync('./udf_runtimes-'+STATUS+'.json'));
+
+const PROCESS_GRAPHS = JSON.parse(fs.readFileSync('./process_graphs-'+STATUS+'.json'));
+const JOBS = JSON.parse(fs.readFileSync('./jobs-'+STATUS+'.json'));
+const SERVICES = JSON.parse(fs.readFileSync('./services-'+STATUS+'.json'));
+const FILES = JSON.parse(fs.readFileSync('./files-'+STATUS+'.json'));
 
 app.get('/', (request, response) => {
     response.send(CAPABILITIES);
@@ -74,6 +82,22 @@ app.get('/service_types', (request, response) => {
 
 app.get('/udf_runtimes', (request, response) => {
     response.send(UDF_RUNTIMES);
+});
+
+app.get('/process_graphs', (request, response) => {
+    response.send(PROCESS_GRAPHS);
+});
+
+app.get('/jobs', (request, response) => {
+    response.send(JOBS);
+});
+
+app.get('/services', (request, response) => {
+    response.send(SERVICES);
+});
+
+app.get('/files', (request, response) => {
+    response.send(FILES);
 });
 
 app.get("/status", (request, response) => {
